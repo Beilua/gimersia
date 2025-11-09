@@ -1151,6 +1151,7 @@ animation = &"idle_leftfront"
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 use_parent_material = true
+process_callback = 0
 position_smoothing_enabled = true
 
 [node name="AttackRange" type="Area2D" parent="Player"]
