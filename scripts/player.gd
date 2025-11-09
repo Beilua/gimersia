@@ -4,10 +4,11 @@ var speed = 400
 var dash_speed = 1000
 var is_dashing = false
 var can_dash = true
+var last_direction = "down"
 
 var fireball = load('res://scenes/fireball.tscn')
 
-@onready var sprite = $Sprite
+@onready var sprite = $AnimatedSprite2D
 @onready var shadow_spawner = $/root/World/ShadowSpawner
 @onready var dash_duration_timer = $Timers/DashDuration
 @onready var dash_cooldown_timer = $Timers/DashCooldown
@@ -46,6 +47,29 @@ func _physics_process(delta):
 		velocity = direction * speed
 
 	move_and_slide()
+	if direction == Vector2.ZERO:
+		sprite.play("idle_" + last_direction)
+	else:
+		var dir = ""
+		if direction.x > 0 and direction.y < 0:
+			dir = "rightback"
+		elif direction.x < 0 and direction.y < 0:
+			dir = "leftback"
+		elif direction.x > 0 and direction.y > 0:
+			dir = "rightfront"
+		elif direction.x < 0 and direction.y > 0:
+			dir = "leftfront"
+		elif direction.y < 0:
+			dir = "back"
+		elif direction.y > 0:
+			dir = "front"
+		elif direction.x > 0:
+			dir = "right"
+		elif direction.x < 0:
+			dir = "left"
+		if dir != "":
+			last_direction = dir
+			sprite.play("walk_" + dir)
 
 	# --- TARGETING SYSTEM ---
 	if enemies.size() > 0:

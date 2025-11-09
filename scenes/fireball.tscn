@@ -1,7 +1,7 @@
 [gd_scene load_steps=13 format=3 uid="uid://do3b7eo3svg6v"]
 
 [ext_resource type="Shader" uid="uid://bb7xa8u82b1xq" path="res://shaders/pixel_smooth.gdshader" id="1_1gl40"]
-[ext_resource type="Texture2D" uid="uid://bbiewngndcuww" path="res://assets/effects/fireball_attack.png" id="1_3s14c"]
+[ext_resource type="Texture2D" uid="uid://bbiewngndcuww" path="res://assets/effects/fireball/fireball_attack.png" id="1_3s14c"]
 [ext_resource type="Script" uid="uid://dawk66wvisxps" path="res://scripts/fireball.gd" id="2_cb14k"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_cb14k"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bbiewngndcuww"
-path="res://.godot/imported/fireball_attack.png-0b8727f92d0f8b05b41927c5a0ec82bb.ctex"
+uid="uid://eb4ddeeicwjy"
+path="res://.godot/imported/walk_leftback.png-8a4f0acfd0ae31be802d0f5fb23a94ff.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/effects/fireball_attack.png"
-dest_files=["res://.godot/imported/fireball_attack.png-0b8727f92d0f8b05b41927c5a0ec82bb.ctex"]
+source_file="res://assets/player/walk_anim/walk_leftback.png"
+dest_files=["res://.godot/imported/walk_leftback.png-8a4f0acfd0ae31be802d0f5fb23a94ff.ctex"]
 
 [params]
 
