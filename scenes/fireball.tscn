@@ -1,0 +1,80 @@
+[gd_scene load_steps=13 format=3 uid="uid://do3b7eo3svg6v"]
+
+[ext_resource type="Shader" uid="uid://bb7xa8u82b1xq" path="res://shaders/pixel_smooth.gdshader" id="1_1gl40"]
+[ext_resource type="Texture2D" uid="uid://bbiewngndcuww" path="res://assets/effects/fireball_attack.png" id="1_3s14c"]
+[ext_resource type="Script" uid="uid://dawk66wvisxps" path="res://scripts/fireball.gd" id="2_cb14k"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_cb14k"]
+shader = ExtResource("1_1gl40")
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gxhll"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1gl40"]
+atlas = ExtResource("1_3s14c")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cb14k"]
+atlas = ExtResource("1_3s14c")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7kba2"]
+atlas = ExtResource("1_3s14c")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_43lgj"]
+atlas = ExtResource("1_3s14c")
+region = Rect2(0, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vqoxj"]
+atlas = ExtResource("1_3s14c")
+region = Rect2(128, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_86oub"]
+atlas = ExtResource("1_3s14c")
+region = Rect2(256, 128, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qaphm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1gl40")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cb14k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7kba2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_43lgj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vqoxj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_86oub")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[node name="Fireball" type="StaticBody2D"]
+collision_layer = 8
+collision_mask = 6
+script = ExtResource("2_cb14k")
+
+[node name="Fireball" type="Area2D" parent="."]
+material = SubResource("ShaderMaterial_cb14k")
+collision_layer = 4
+collision_mask = 6
+
+[node name="Collision" type="CollisionShape2D" parent="Fireball"]
+shape = SubResource("CircleShape2D_gxhll")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+use_parent_material = true
+sprite_frames = SubResource("SpriteFrames_qaphm")
+frame_progress = 0.81672174
+
+[connection signal="body_entered" from="Fireball" to="." method="_on_fireball_body_entered"]

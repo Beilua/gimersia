@@ -1,0 +1,16 @@
+63f7b34db8d8cdea90c76aacccf841ec
+::res://::1762693521
+icon.svg::CompressedTexture2D::2716373203290156908::1762693510::1762693522::1::::<><><>0<>0<>980203272e9a1d53f691dd2cb34b2aca<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+::res://assets/::1762693515
+::res://assets/effects/::1762693515
+fireball_attack.png::CompressedTexture2D::2473407397467735602::1762693510::1762693522::1::::<><><>0<>0<>c1a1bfee3468ea31831a0cc30ae0ea85<>res://.godot/imported/fireball_attack.png-0b8727f92d0f8b05b41927c5a0ec82bb.ctex::
+::res://scenes/::1762693515
+fireball.tscn::PackedScene::8199826534540895123::1762693510::0::1::::<><><>0<>0<><>::uid://bb7xa8u82b1xq::::res://shaders/pixel_smooth.gdshader<>uid://bbiewngndcuww::::res://assets/effects/fireball_attack.png<>uid://dawk66wvisxps::::res://scripts/fireball.gd
+world.tscn::PackedScene::2819574606589245596::1762693510::0::1::::<><><>0<>0<><>::uid://bb7xa8u82b1xq::::res://shaders/pixel_smooth.gdshader<>uid://clr5o2wuaa1c8::::res://scripts/player.gd<>uid://bex3jf44s5ggy::::res://icon.svg<>uid://cs3g7hefwv6r6::::res://scripts/enemy.gd
+::res://scripts/::1762693515
+enemy.gd::GDScript::6094464951446121221::1762693510::0::1::::<>CharacterBody2D<><>0<>0<><>::
+fireball.gd::GDScript::7205342554382455452::1762693510::0::1::::<>StaticBody2D<><>0<>0<><>::
+player.gd::GDScript::5581861033146126669::1762693510::0::1::::<>CharacterBody2D<><>0<>0<><>::
+::res://shaders/::1762693515
+pixel_smooth.gdshader::Shader::2524067871996838238::1762693510::0::1::::<><><>0<>0<><>::
+white_shadow.gdshader::Shader::150881962975085806::1762693510::0::1::::<><><>0<>0<><>::
