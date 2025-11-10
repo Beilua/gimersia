@@ -4,7 +4,7 @@ var speed = 400
 var dash_speed = 1000
 var is_dashing = false
 var can_dash = true
-var last_direction = "down"
+var last_direction = "front"
 
 var fireball = load('res://scenes/fireball.tscn')
 
